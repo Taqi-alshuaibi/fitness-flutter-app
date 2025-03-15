@@ -11,7 +11,7 @@ class AuthMethod {
     required String password,
     required String name,
   }) async {
-    String res = "Some error Occurred";
+    String res = "حدث خطأ ما";
     try {
       if (email.isNotEmpty && password.isNotEmpty && name.isNotEmpty) {
         UserCredential cred = await _auth.createUserWithEmailAndPassword(
@@ -24,7 +24,7 @@ class AuthMethod {
           'email': email,
         });
 
-        res = "success";
+        res = "نجاح";
       }
     } catch (err) {
       return err.toString();
@@ -37,16 +37,16 @@ class AuthMethod {
     required String email,
     required String password,
   }) async {
-    String res = "Some error Occurred";
+    String res = "حدث خطأ ما";
     try {
       if (email.isNotEmpty && password.isNotEmpty) {
         await _auth.signInWithEmailAndPassword(
           email: email,
           password: password,
         );
-        res = "success";
+        res = "نجاح";
       } else {
-        res = "Please enter all the fields";
+        res = "يرجى ملء جميع الحقول";
       }
     } catch (err) {
       return err.toString();

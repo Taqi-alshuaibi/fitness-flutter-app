@@ -73,7 +73,7 @@ class _YemenFitnessClubsMapState extends State<YemenFitnessClubsMap> {
                 TextField(
                   controller: stadiumController,
                   decoration: InputDecoration(
-                    labelText: 'اسم الملعب',
+                    labelText: 'مكان النادي',
                     border: OutlineInputBorder(),
                   ),
                 ),
@@ -152,7 +152,7 @@ class _YemenFitnessClubsMapState extends State<YemenFitnessClubsMap> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('أندية كرة القدم اليمنية'),
+        title: Text('أنديةالياقة البدنية اليمنية'),
         actions: [
           IconButton(
             icon: Icon(Icons.refresh),

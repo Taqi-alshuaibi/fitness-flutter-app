@@ -31,7 +31,7 @@ class _SignupScreenState extends State<SignupScreen> {
     if (_nameController.text.isEmpty ||
         _emailController.text.isEmpty ||
         _passwordController.text.isEmpty) {
-      showSnackBar(context, 'الرجى');
+      showSnackBar(context, 'يرجى ملء جميع الحقول');
       return;
     }
 
@@ -42,7 +42,7 @@ class _SignupScreenState extends State<SignupScreen> {
       name: _nameController.text,
     );
 
-    if (res == "success") {
+    if (res == "نجاح") {
       Navigator.pushReplacement(
         context,
         MaterialPageRoute(builder: (context) => const HomeScreen()),
@@ -77,7 +77,7 @@ class _SignupScreenState extends State<SignupScreen> {
                 children: [
                   SizedBox(height: size.height * 0.05),
                   const Text(
-                    'Create Account',
+                    'انشاء حساب',
                     style: TextStyle(
                       fontSize: 32,
                       fontWeight: FontWeight.bold,
@@ -105,7 +105,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         TextFieldInput(
                           icon: Icons.person_outline,
                           textEditingController: _nameController,
-                          hintText: 'Full Name',
+                          hintText: 'الاسم كامل',
                           textInputType: TextInputType.name,
                           iconColor: Colors.white70,
                         ),
@@ -114,7 +114,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         TextFieldInput(
                           icon: Icons.email_outlined,
                           textEditingController: _emailController,
-                          hintText: 'Email Address',
+                          hintText: 'الايميل',
                           textInputType: TextInputType.emailAddress,
                           iconColor: Colors.white70,
                         ),
@@ -123,7 +123,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         TextFieldInput(
                           icon: Icons.lock_outline,
                           textEditingController: _passwordController,
-                          hintText: 'Password',
+                          hintText: 'كلمة السر',
                           textInputType: TextInputType.visiblePassword,
                           isPass: true,
                           iconColor: Colors.white70,
@@ -146,7 +146,7 @@ class _SignupScreenState extends State<SignupScreen> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       const Text(
-                        "Already have an account? ",
+                        "هل لديك حساب بالفعل؟ ",
                         style: TextStyle(color: Colors.white70),
                       ),
                       GestureDetector(
@@ -170,7 +170,7 @@ class _SignupScreenState extends State<SignupScreen> {
                   const Icon(Icons.fitness_center, size: 100, color: Colors.white),
                   const SizedBox(height: 20),
                   const Text(
-                    'Start your fitness journey today!',
+                    'ابدأ رحلتك في اللياقة البدنية اليوم',
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.white70,

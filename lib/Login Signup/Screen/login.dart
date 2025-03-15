@@ -118,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         // Log In Button
                         MyButtons(
                           onTap: _loginUser,
-                          text: "Log In",
+                          text: "تسجيل الدخول",
                           isLoading: _isLoading,
                           gradient: const LinearGradient(
                             colors: [Color(0xFF34A694), Color(0xFF0F3443)],
@@ -141,7 +141,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           MaterialPageRoute(builder: (context) => const SignupScreen()),
                         ),
                         child: const Text(
-                          "Sign Up",
+                          "انشاء حساب",
                           style: TextStyle(
                             color: Colors.white,
                             fontWeight: FontWeight.bold,
